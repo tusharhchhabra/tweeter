@@ -1,0 +1,23 @@
+header {
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  background-color: #0091ff;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+}
+
+header img {
+  /* background-color: red; */
+  padding: 0;
+}
+
+header h2 {
+  color: white;
+  /* background-color: blue; */
+  font-weight: normal;
+  margin: -15px 0 0 0;
+  padding: 0;
+}
