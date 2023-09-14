@@ -6,6 +6,7 @@
 .new-tweet label {
   display: block;
   margin-bottom: 16px;
+  font-weight: bold;
 }
 
 .new-tweet textarea {
@@ -36,5 +37,9 @@
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee';
+}
+
+.red-text {
+  color: red;
 }
 

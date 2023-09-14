@@ -1,4 +1,4 @@
-header {
+.main-header {
   height: 520px;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,12 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/robots.png");
 }
 
-header img {
+.main-header img {
   /* background-color: red; */
   padding: 0;
 }
 
-header h2 {
+.main-header h2 {
   color: white;
   /* background-color: blue; */
   font-weight: normal;
