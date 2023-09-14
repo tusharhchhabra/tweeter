@@ -22,6 +22,7 @@ body {
   background-color: #f4f1ec;
   font-family: "Source Sans 3", sans-serif;
   font-size: 24px;
+  padding-bottom: 3em;
 }
 
 /*
@@ -35,4 +36,8 @@ body {
   background-color: #f4f1ec;
   color: #545149;
   padding: 1em;
+}
+
+#tweets-container {
+  margin-top: 3em;
 }
