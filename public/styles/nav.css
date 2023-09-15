@@ -26,3 +26,10 @@ nav span {
 nav i {
   color: red;
 }
+
+@media (max-width: 1024px) {
+  nav {
+    background-color: transparent;
+    transition: 0.2s;
+  }
+}

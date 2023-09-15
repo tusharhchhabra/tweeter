@@ -29,23 +29,31 @@ const data = [
   }
 ];
 
+const escapeString = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
+  const { format } = window.timeago;
+
   return $(
     `<article class="tweet">
     <header>
       <div>
         <img src="${tweet["user"]["avatars"]}" />
-        ${tweet["user"]["name"]}
+        ${escapeString(tweet["user"]["name"])}
       </div>
       <p>
-        ${tweet["user"]["handle"]}
+        ${escapeString(tweet["user"]["handle"])}
       </p>
     </header>
     <p class="tweet-text">
-      ${tweet["content"]["text"]}
+      ${escapeString(tweet["content"]["text"])}
     </p>
     <footer>
-      ${tweet["created_at"]}
+      ${format(tweet["created_at"])}
       <div class="actions">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -79,14 +87,30 @@ const loadTweets = function() {
 $(document).ready(function() {
   $(".new-tweet form").submit(function(e) {
     e.preventDefault();
-    const tweetText = $("#tweet-text").serialize();
 
-    console.log(tweetText);
+    const tweetLength = $("#tweet-text").val().length;
+    const trimmedLength = $("#tweet-text").val().trim().length;
+
+    if (trimmedLength === 0) {
+      const $errElem = $("#error-message")
+      $errElem.text("A tweet can't be empty!")
+      $errElem.slideDown();
+      return;
+    } else if (tweetLength > 140) {
+      const $errElem = $("#error-message")
+      $errElem.text("The tweet's length exceeds the 140-character limit.")
+      $errElem.slideDown();
+      return;
+    }
+
+    const tweetData = $("#tweet-text").serialize();
+    $("#tweet-text").val("")
+    $(".new-tweet .counter").text(140)
 
     $.ajax({
       url: "/tweets",
       type: "POST",
-      data: tweetText,
+      data: tweetData,
       success: function() {
         loadTweets();
       }

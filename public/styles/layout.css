@@ -41,3 +41,14 @@ body {
 #tweets-container {
   margin-top: 3em;
 }
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    margin-top: 140px;
+    margin-right: 40px;
+  }
+}

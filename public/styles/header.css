@@ -16,8 +16,15 @@
 
 .main-header h2 {
   color: white;
-  /* background-color: blue; */
   font-weight: normal;
   margin: -15px 0 0 0;
   padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .main-header {
+    width: 50vw;
+    padding-top: 40px;
+    margin: 180px 3rem 3rem 60px;
+  }
 }
