@@ -42,7 +42,7 @@ article.tweet footer .actions {
   gap: 20px;
   color: #4056A1;
 }
-article.tweet footer i:hover {
+article.tweet footer button:hover {
   color: orange;
   scale: 1.2;
   transition: 0.1s;

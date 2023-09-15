@@ -25,6 +25,12 @@ nav i {
   gap: 5px;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
 @media (max-width: 1024px) {
   nav {
     background-color: transparent;

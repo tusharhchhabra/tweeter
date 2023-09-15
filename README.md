@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Welcome to my Tweeter project!
+Welcome to Tweeter!<br>
 Tweeter is a simple, single-page Twitter clone I built in the process of learning web development at Lighthouse Labs.
 
 !["Screenshot of desktop view"](https://github.com/tusharhchhabra/tweeter/blob/master/docs/screenshot-1.png?raw=true)
