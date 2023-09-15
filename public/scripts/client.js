@@ -58,12 +58,38 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(tweets) {
   const $tweetContainer = $("#tweets-container");
+  $tweetContainer.empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $tweetContainer.append($tweet);
+    $tweetContainer.prepend($tweet);
   }
 };
 
+const loadTweets = function() {
+  $.ajax({
+    url: "/tweets",
+    type: "GET",
+    success: function(tweets) {
+      console.log(tweets);
+      renderTweets(tweets);
+    }
+  });
+};
+
 $(document).ready(function() {
-  renderTweets(data);
+  $(".new-tweet form").submit(function(e) {
+    e.preventDefault();
+    const tweetText = $("#tweet-text").serialize();
+
+    console.log(tweetText);
+
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: tweetText,
+      success: function() {
+        loadTweets();
+      }
+    });
+  });
 });
