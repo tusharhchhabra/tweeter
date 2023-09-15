@@ -3,6 +3,9 @@
 Welcome to my Tweeter project!
 Tweeter is a simple, single-page Twitter clone I built in the process of learning web development at Lighthouse Labs.
 
+!["Screenshot of desktop view"](https://github.com/tusharhchhabra/tweeter/blob/master/docs/screenshot-1.png?raw=true)
+!["Screenshot of mobile/tablet view"](https://github.com/tusharhchhabra/tweeter/blob/master/docs/screenshot-2.png?raw=true)
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
