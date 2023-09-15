@@ -7,12 +7,14 @@ nav {
   justify-content: space-between;
   padding: 1.5em 3em;
 }
-
 nav span {
   color: white;
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee";
   font-size: 2em;
   flex-grow: 1;
+}
+nav i {
+  color: red;
 }
 
 .new-tweet-button {
@@ -21,10 +23,6 @@ nav span {
   flex-direction: column;
   align-items: center;
   gap: 5px;
-}
-
-nav i {
-  color: red;
 }
 
 @media (max-width: 1024px) {

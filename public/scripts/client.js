@@ -78,13 +78,14 @@ const loadTweets = function() {
     url: "/tweets",
     type: "GET",
     success: function(tweets) {
-      console.log(tweets);
       renderTweets(tweets);
     }
   });
 };
 
 $(document).ready(function() {
+  loadTweets();
+
   $(".new-tweet form").submit(function(e) {
     e.preventDefault();
 

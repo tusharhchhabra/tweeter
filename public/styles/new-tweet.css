@@ -1,14 +1,8 @@
-/* .new-tweet {
-  display: flex;
-  flex-direction: column;
-} */
-
 .new-tweet label {
   display: block;
   margin-bottom: 16px;
   font-weight: bold;
 }
-
 .new-tweet textarea {
   resize: none;
   width: 100%;
@@ -20,11 +14,6 @@
   margin-bottom: 16px;
   padding: 0;
 }
-
-.new-tweet textarea:focus {
-  border-width: 0 0 4px 0;
-}
-
 .new-tweet button {
   background-color: #4056A1;
   color: white;
@@ -32,11 +21,18 @@
   border-radius: 5px;
   padding: 0.45em 0.8em;
 }
-
 .new-tweet div {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee';
+  font-family: "Bungee";
+}
+.new-tweet #error-message {
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  color: red;
 }
 
 .red-text {
@@ -45,15 +41,5 @@
 
 .disabled {
   opacity: 0.5;
-  transition: 0.15s
-}
-
-#error-message {
-  justify-content: flex-start;
-  gap: 0.5rem;
-  padding: 1rem 0;
-
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 600;
-  color: red;
+  transition: 0.15s;
 }

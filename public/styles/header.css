@@ -8,12 +8,9 @@
   background-color: sandybrown;
   background-image: url("https://www.transparenttextures.com/patterns/robots.png");
 }
-
 .main-header img {
-  /* background-color: red; */
   padding: 0;
 }
-
 .main-header h2 {
   color: white;
   font-weight: normal;

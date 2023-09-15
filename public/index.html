@@ -4,6 +4,8 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet"
@@ -69,7 +71,7 @@
     </div>
     <br>
     <div>
-      <h2><Strong>Your</Strong> Name</h2>
+      <h2><Strong>Tushar</Strong> Chhabra</h2>
     </div>
   </header>
 
@@ -79,19 +81,22 @@
       <h2>Compose Tweet</h2>
       <form method="POST"
             action="/tweets/">
+
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text"
                   id="tweet-text"></textarea>
+
         <div>
           <button type="submit">Tweet</button>
           <output name="counter"
                   class="counter"
                   for="tweet-text">140</output>
         </div>
+
         <div id="error-message"
              style="display:none;">
           <i class="fa fa-exclamation-circle"></i>
-          Please enter some text.
+          Error: Invalid input.
         </div>
       </form>
     </section>
