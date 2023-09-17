@@ -7,6 +7,9 @@ article.tweet:hover {
   box-shadow: 8px 8px rgb(201, 202, 225);
   transition: 0.2s;
 }
+article.tweet p {
+  overflow-wrap: break-word;
+}
 article.tweet header {
   display: flex;
   justify-content: space-between;
