@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     // Remove submit error text when character count enters valid range 
     if ($(".new-tweet #error-message").css("display") !== "none") {
-      if (counterVal > 0 && counterVal <= 140) {
+      if (counterVal >= 0 && counterVal <= 140) {
         $("#error-message").slideUp();
       }
     }
